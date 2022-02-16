@@ -129,6 +129,79 @@ body {
 .bottom-cards h3 {
   font-weight: 500;
 }
+.last-container-top {
+  background-image: url("/images/lastdivtopimage.jpg");
+  background-size: 100% 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  padding: 1.5em 0em;
+}
+
+.top-button {
+  border-radius: 2em;
+  border-width: 0.1em;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  background-color: white;
+  color: rgb(250, 171, 185);
+  font-family: "Rubik", sans-serif;
+}
+.last-container-top h2 {
+  font-size: 3em;
+  grid-column: 2;
+  color: white;
+}
+.last-container-top button {
+  grid-column: 3;
+  width: fit-content;
+  padding: 0.5em 1em;
+  background-color: white;
+  color: rgb(250, 171, 185);
+  font-family: "Rubik", sans-serif;
+  border-radius: 2em;
+  border-width: 0.1em;
+  font-size: 1em;
+}
+.last-container-middle {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.last-container-middle-left h4,
+.last-container-middle-left p {
+  color: rgb(173, 172, 172);
+  margin-top: 0;
+}
+.last-container-middle-left {
+  flex: 35%;
+  padding: 2em;
+}
+.price-800 {
+  text-decoration: line-through;
+}
+.price-500 {
+  color: rgb(87, 87, 87);
+}
+.last-container-middle-price {
+  font-size: 2em;
+}
+.last-container-middle-image {
+  display: flex;
+}
+.the-best-beach {
+  max-width: 100%;
+}
+.count-down {
+  color: white;
+  background-color: rgb(127, 213, 241);
+  position: absolute;
+  align-self: flex-end;
+  padding: 0.5em 1em;
+}
+
 .foot-container {
   background-color: #f5faff;
   color: rgb(5, 66, 5);
