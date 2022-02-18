@@ -10,6 +10,14 @@ body {
   margin: 0;
   font-family: "Rubik", sans-serif;
 }
+.duration-span,
+.tour-span {
+  display: none;
+}
+.fa-star,
+.fa-star-half-stroke {
+  font-size: 0.8em;
+}
 .fa-regular,
 .fa-solid {
   color: rgb(226, 40, 40);
@@ -131,20 +139,26 @@ body {
 }
 .last-container-top {
   background-image: url("/images/lastdivtopimage.jpg");
-  background-size: 100% 80%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
+}
+.black-contrast {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
-  padding: 1.5em 0em;
+  padding: 0em 0em;
   position: relative;
   gap: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .last-container-top h2 {
   font-size: 3em;
   grid-column: 2;
   color: white;
+}
+.holiday {
+  text-decoration: underline red;
 }
 .last-container-top button {
   grid-column: 3;
@@ -174,8 +188,12 @@ body {
 .price-800 {
   text-decoration: line-through;
 }
-.price-500 {
+.price-500,
+.for-person {
   color: rgb(87, 87, 87);
+}
+.for-person {
+  font-size: 0.5em;
 }
 .last-container-middle-price {
   font-size: 2em;
@@ -202,7 +220,7 @@ body {
   color: white;
   background-color: rgb(127, 213, 241);
   position: absolute;
-  padding: 25px 0px 25px 0px;
+  padding: 25px 0px;
   height: 40px;
   width: 70%;
   bottom: -45px;
@@ -213,27 +231,26 @@ body {
   font-size: 1.1em;
 }
 .last-container-bottom {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 2em;
-  gap: 20px;
   text-align: center;
+  display: flex;
+  font-size: 0.8em;
 }
 .last-container-bottom h2 {
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 .fa-earth-americas,
 .fa-ship,
 .fa-landmark {
+  display: none;
   color: rgb(87, 87, 87);
-  display: inline;
   padding: 0;
+  font-size: 2em;
 }
 .last-links {
+  color: rgb(4, 112, 89);
   display: inline-block;
   padding-top: 1.5em;
 }
-
 .foot-container {
   background-color: #f5faff;
   color: rgb(5, 66, 5);
@@ -266,12 +283,38 @@ body {
   color: rgb(2, 59, 5);
   padding: 0em 0.1em;
 }
+#padding-container2 {
+  padding: 1.5em 0em;
+}
+
 @media screen and (min-width: 960px) {
   body {
     font-size: 20px;
   }
   h2 {
     font-size: 40px;
+  }
+  .black-contrast {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+    position: relative;
+    gap: 150px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .black-contrast h2 {
+    font-size: 2.3em;
+  }
+  .black-contrast button {
+    letter-spacing: 0.1em;
+  }
+  .duration-span,
+  .tour-span {
+    display: inline;
+  }
+  .fa-star,
+  .fa-star-half-stroke {
+    font-size: 0.8em;
   }
   .padding-container {
     padding: 2em 0em;
@@ -327,16 +370,38 @@ body {
   }
   .last-container-middle {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1.5fr 2.5fr;
   }
   .last-container-middle-left {
     padding: 4em;
   }
   .last-container-middle-image {
     background-size: 100% 100%;
-    max-width: 80%;
+    width: 80%;
+    height: 500px;
+  }
+  .count-down {
+    padding: 25px 20px 20px 20px;
+  }
+  .last-container-bottom {
+    grid-template-columns: 0.2fr 0.8fr 0.2fr 0.8fr 0.2fr 0.8fr;
+    text-align: left;
+    gap: 10px;
+    margin: 0 10%;
+  }
+  .last-container-bottom h2 {
+    font-size: 1em;
+  }
+  .fa-earth-americas,
+  .fa-ship,
+  .fa-landmark {
+    display: block;
+    bottom: -10%;
+    font-size: 3em;
+    position: relative;
   }
   .foot-container {
+    padding: 0;
     display: flex;
     text-align: center;
     align-items: center;
@@ -349,19 +414,12 @@ body {
     padding: 0em 0.5em;
     text-align: center;
   }
+  #padding-container2 {
+    display: none;
+  }
 }
 @media screen and (min-width: 1366px) {
   .top-container div:nth-child(4) {
     flex: 12em;
-  }
-}
-@media screen and (max-width: 1140px) {
-  .duration-span,
-  .tour-span {
-    display: none;
-  }
-  .fa-star,
-  .fa-star-half-stroke {
-    font-size: 0.8em;
   }
 }
